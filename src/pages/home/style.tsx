@@ -88,3 +88,7 @@ export const ProjectAreaWrapperColumns = styled(Flex, {
     flexDirection: "column",
   },
 });
+
+export const ProjectsAreaSocialMediaMessageAboutMe = styled(ProjectsAreaSocialMediaMessage, {
+  width: "100%"
+})
