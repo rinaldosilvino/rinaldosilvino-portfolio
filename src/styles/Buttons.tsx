@@ -33,6 +33,15 @@ export const Button = styled('button', {
                     borderColor: "$brand2",
                 }
             },
+            secondary: {
+                background: "$brand1",
+                borderColor: "$brand1",
+                color: "$whiteFixed",
+                "&:hover": {
+                    backgroundColor: "$brand3",
+                    borderColor: "$brand2",
+                }
+            },
             icon: {
                 borderColor: "$grey5",
                 backgroundColor: "transparent",

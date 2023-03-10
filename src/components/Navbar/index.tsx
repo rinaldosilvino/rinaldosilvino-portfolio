@@ -15,6 +15,7 @@ import { FaGithub, FaLinkedinIn, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { Button } from "@/styles/Buttons";
 import { Container } from "@/styles/Global";
+import { useNavigate } from "react-router-dom";
 
 export interface MenuButtonOpen {
   open: Boolean;
@@ -23,7 +24,7 @@ export interface MenuButtonOpen {
 
 export const NavBar = (): JSX.Element => {
   const isWide = useMedia({ maxWidth: "991px" });
-
+  
   document.title = userData.nameUser;
 
   const [open, setOpen] = useState(false);
@@ -31,6 +32,8 @@ export const NavBar = (): JSX.Element => {
   const OpenMenu = () => {
     setOpen(!open);
   };
+
+
 
   return (
     <NavbarWrapper>
@@ -46,6 +49,7 @@ export const NavBar = (): JSX.Element => {
             />
             <LogoTipoText>{userData.nameUser}</LogoTipoText>
           </LogoTipo>
+          
           {isWide && (
             <Button
               type="icon"
@@ -63,8 +67,31 @@ export const NavBar = (): JSX.Element => {
 };
 
 export const NavLinks = (): JSX.Element => {
+  const navigate = useNavigate();
+  const acessProject =() =>{
+    navigate("/myprojects")
+  }
+  const acessAboutMe =() =>{
+    navigate("/aboutme")
+  }
   return (
     <NavbarLinks>
+      <Button
+          type="secondary"
+          as="a"
+          target="_blank"
+          onClick={()=>acessProject()}
+        >
+          Projetos
+      </Button>
+      <Button
+          type="secondary"
+          as="a"
+          target="_blank"
+          onClick={()=>acessAboutMe()}
+        >
+          Sobre mim
+      </Button>
       {userData.whatsappNumber && (
         <Button
           type="primary"
