@@ -74,8 +74,14 @@ export const NavLinks = (): JSX.Element => {
   const acessAboutMe =() =>{
     navigate("/aboutme")
   }
+  const acessHome =() =>{
+    navigate("/home")
+  }
   return (
     <NavbarLinks>
+      <LogoTipo onClick={()=>acessHome()}>        
+      </LogoTipo>
+      
       <Button
           type="secondary"
           as="a"

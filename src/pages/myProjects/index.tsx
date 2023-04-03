@@ -39,26 +39,14 @@ export const MyProjects = (): JSX.Element => {
               <ProjectsAreaSocialMediaMessage>
                 <ProjetcsContainer>
   
-                  <ProjectsCard>
+                <ProjectsCard>
                     <Button
                       type="primary"
                       target="_blank"
                       as="a"
-                      href={`https://github.com/rinaldosilvino/m6-sprint3-fullstack-cadastro_de_clientes`}
+                      href={`https://react-entrega-s1-hamburgueria-da-kenzie-rinaldosilvino.vercel.app/`}
                     >
-                    Cadastro de clientes
-                    </Button>
-  
-                  </ProjectsCard>
-  
-                  <ProjectsCard>
-                    <Button
-                      type="primary"
-                      target="_blank"
-                      as="a"
-                      href={`https://github.com/rinaldosilvino/m6-sprint2-desafio_backend`}
-                    >
-                    Leitor de arquivos CNAB
+                    Hamburgueria Kenzie_Burguer
                     </Button>
                   </ProjectsCard>
   
@@ -67,12 +55,23 @@ export const MyProjects = (): JSX.Element => {
                       type="primary"
                       target="_blank"
                       as="a"
-                      href={`https://github.com/rinaldosilvino/m6-sprint1-frontend-calculadora_de_antecipacao`}
+                      href={`https://react-entrega-s2-formulario-de-cadastro-rinaldosilvino.vercel.app/`}
                     >
-                    Calculadora de antecipação
+                    Formulario_de_Cadastro-Kenzie_Hub
                     </Button>
                   </ProjectsCard>
-  
+
+                  <ProjectsCard>
+                    <Button
+                      type="primary"
+                      target="_blank"
+                      as="a"
+                      href={`https://react-entrega-s1-nu-kenzie-rinaldosilvino.vercel.app/`}
+                    >
+                    nu_kenzie_bank
+                    </Button>
+                  </ProjectsCard>
+
                 </ProjetcsContainer>
               </ProjectsAreaSocialMediaMessage>
               
