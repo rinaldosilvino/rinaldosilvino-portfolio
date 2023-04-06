@@ -23,6 +23,7 @@ export const Navbar = styled("nav", {
 
 export const LogoTipo = styled(Flex, {
   alignItems: "center",
+  cursor: "pointer",
 });
 
 export const LogoTipoImage = styled("img", {

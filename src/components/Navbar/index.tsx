@@ -24,7 +24,7 @@ export interface MenuButtonOpen {
 
 export const NavBar = (): JSX.Element => {
   const isWide = useMedia({ maxWidth: "991px" });
-  
+  const navigate = useNavigate();
   document.title = userData.nameUser;
 
   const [open, setOpen] = useState(false);
@@ -33,13 +33,15 @@ export const NavBar = (): JSX.Element => {
     setOpen(!open);
   };
 
-
+  const acessHome =() =>{
+    navigate("/home")
+  }
 
   return (
     <NavbarWrapper>
       <Container>
         <NavbarMobileArea>
-          <LogoTipo>
+          <LogoTipo  onClick={()=>acessHome()}>
             <LogoTipoImage
               src={`https://github.com/${userData.githubUser}.png`}
               alt={userData.nameUser}
@@ -74,12 +76,10 @@ export const NavLinks = (): JSX.Element => {
   const acessAboutMe =() =>{
     navigate("/aboutme")
   }
-  const acessHome =() =>{
-    navigate("/home")
-  }
+
   return (
     <NavbarLinks>
-      <LogoTipo onClick={()=>acessHome()}>        
+      <LogoTipo>        
       </LogoTipo>
       
       <Button
